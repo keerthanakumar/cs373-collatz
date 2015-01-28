@@ -49,6 +49,8 @@ def collatz_eval (i, j) :
     return the max cycle length of the range [i, j]
     """
     maxcycles = 1
+    if (i > j):
+        i, j = j, i
     for n in range(i, j+1):
         c = get_cycles(n)
         if maxcycles < c:

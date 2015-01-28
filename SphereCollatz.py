@@ -29,7 +29,7 @@ def get_cycles (n) :
     return the number of cycles taken from n to 1 following problem 
     """
     c = 1
-    while (n > 1):
+    while (n > 1) :
         if (n % 2) == 0:
             n = n >> 1
             c += 1
@@ -49,9 +49,11 @@ def collatz_eval (i, j) :
     return the max cycle length of the range [i, j]
     """
     maxcycles = 1
-    for n in range(i, j+1):
+    if (i > j) :
+        i, j = j, i        
+    for n in range(i, j+1) :
         c = get_cycles(n)
-        if maxcycles < c:
+        if maxcycles < c :
             maxcycles = c
     return maxcycles
 

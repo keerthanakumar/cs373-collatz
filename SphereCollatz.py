@@ -97,6 +97,15 @@ def collatz_solve (r, w) :
         v    = collatz_eval(i, j)
         collatz_print(w, i, j, v)
 
+# ------------
+# mapper_print
+# ------------
+
+def mapper_print(v):
+    for k  in num_cycles:
+        if num_cycles[k] is  v:
+            print(k, num_cycles[k])
+
 # ----
 # main
 # ----

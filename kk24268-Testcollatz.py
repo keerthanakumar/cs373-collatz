@@ -13,7 +13,7 @@
 from io       import StringIO
 from unittest import main, TestCase
 
-from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve
+from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve, get_cycles
 
 # -----------
 # TestCollatz
@@ -47,6 +47,25 @@ class TestCollatz (TestCase) :
         i,j = collatz_read(s)
         self.assertEqual(i, 1)
         self.assertEqual(j, 10)
+
+    # ------
+    # cycles
+    # ------
+
+    def test_cycles_1 (self) :
+        n = 1
+        r = get_cycles(n)
+        self.assertEqual(r, 1)
+
+    def test_cycles_2 (self) :
+        n = 9
+        r = get_cycles(n)
+        self.assertEqual(r, 20)
+
+    def test_cycles_3 (self) :
+        n = 27
+        r = get_cycles(n)
+        self.assertEqual(r, 112)
 
     # ----
     # eval
@@ -94,6 +113,11 @@ class TestCollatz (TestCase) :
         collatz_print(w, 10, 1, 20)
         self.assertEqual(w.getvalue(), "10 1 20\n")
 
+    def test_print_3 (self):
+        w = StringIO()
+        collatz_print(w, 10000, -100000, 0)
+        self.assertEqual(w.getvalue(), "10000 -100000 0\n")
+
     # -----
     # solve
     # -----
@@ -104,6 +128,18 @@ class TestCollatz (TestCase) :
         collatz_solve(r, w)
         self.assertEqual(w.getvalue(), "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n")
 
+    def test_solve_2 (self) :
+        r = StringIO("16492 688777\n10 1\n450 99\n1 1000\n")
+        w = StringIO()
+        collatz_solve(r, w)
+        self.assertEqual(w.getvalue(), "16492 688777 509\n10 1 20\n450 99 144\n1 1000 179\n")
+
+    def test_solve_3 (self) :
+        r = StringIO("2 99\n3 1\n22 22\n")
+        w = StringIO()
+        collatz_solve(r, w)
+        self.assertEqual(w.getvalue(), "2 99 119\n3 1 8\n22 22 16\n")
+
 # ----
 # main
 # ----
@@ -111,7 +147,7 @@ class TestCollatz (TestCase) :
 if __name__ == "__main__" :
     main()
 
-"""
+""" #pragma: no cover
 % coverage3 run --branch TestCollatz.py >  TestCollatz.out 2>&1
 
 

@@ -1,0 +1,65 @@
+commit 7000663760aee0243ccab49ed1cea77e396b128a
+Author: Keerthana Kumar <keerthana.kumar@gmail.com>
+Date:   Thu Feb 5 20:10:38 2015 -0600
+
+    Cleanup
+
+commit 7b00b3e0a8e0134f54828006b6e0a921fdb36019
+Author: Keerthana Kumar <keerthana.kumar@gmail.com>
+Date:   Thu Feb 5 20:10:07 2015 -0600
+
+    Final cleanup
+
+commit 571098e761cbd868a926c495554738f93c8207bd
+Author: Keerthana Kumar <keerthana.kumar@gmail.com>
+Date:   Thu Feb 5 20:04:34 2015 -0600
+
+    Closed #10
+
+commit 91c16c5c330d34e2558fdfea36c46c922fd428e6
+Author: Keerthana Kumar <keerthana.kumar@gmail.com>
+Date:   Thu Feb 5 19:59:10 2015 -0600
+
+    Closed #9. Made pydoc
+
+commit 8f5f4e1a69e6fcdeb149d583c9a13c6dc60e27a7
+Author: Keerthana Kumar <keerthana.kumar@gmail.com>
+Date:   Wed Feb 4 22:54:11 2015 -0600
+
+    Closed #7; Test case and coverage completed
+
+commit 55038fdd22b9f554bd0c394bf82001483add0f15
+Author: Keerthana Kumar <keerthana.kumar@gmail.com>
+Date:   Wed Feb 4 22:16:51 2015 -0600
+
+    Closes #8; Created 100 lines of acceptable tests
+
+commit 92b3a15a6dc6221b2337455794932fb0ae4f9833
+Author: Keerthana Kumar <keerthana.kumar@gmail.com>
+Date:   Wed Feb 4 21:54:15 2015 -0600
+
+    Added unit tests
+
+commit 3e17c4fc5330bc71ca601068cb1e28e886ba5d27
+Author: Keerthana Kumar <keerthana.kumar@gmail.com>
+Date:   Wed Jan 28 13:26:15 2015 -0600
+
+    Closed #6; Optimized code using dictionary
+
+commit 3e15ec27bab464d0a9170aad90283b0aa7173c77
+Author: Keerthana Kumar <keerthana.kumar@gmail.com>
+Date:   Wed Jan 28 13:00:50 2015 -0600
+
+    Closed #5 : passes Spoj.com
+
+commit b803a2d2e3952c0806a89e9f05a76c87c9177dac
+Author: Keerthana Kumar <keerthana.kumar@gmail.com>
+Date:   Wed Jan 28 12:44:08 2015 -0600
+
+    This closes #4
+
+commit c9b90953ab7d4de00ff61ab51129e6c133ad0c11
+Author: Keerthana Kumar <keerthana.kumar@gmail.com>
+Date:   Wed Jan 28 11:36:37 2015 -0600
+
+    Starter code copied, setting up folder

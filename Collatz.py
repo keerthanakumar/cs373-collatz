@@ -5,6 +5,7 @@
 # Copyright (C) 2015
 # Glenn P. Downing
 # ---------------------------
+""""Collatz"""
 
 # ---------------
 # global variabls
@@ -33,22 +34,13 @@ def get_cycles (n) :
     """
     n the number within 1 and 1000000 to calculate the cycles
     return the number of cycles taken from n to 1 following problem 
-    c = 1
-    while (n > 1):
-        if (n % 2) == 0:
-            n = n >> 1
-            c += 1
-        else:
-            n = n + (n >> 1) + 1
-            c += 2
-    return c
     """
-    if n not in num_cycles :
-        if (n % 2) == 0 :
+    if n not in num_cycles : #Checks if the value has been computed
+        if (n % 2) == 0 : #Collatz Conjecture
             num_cycles[n] = get_cycles(n >> 1) + 1
         else:
             num_cycles[n] = get_cycles(3*n + 1) + 1
-    return num_cycles[n]
+    return num_cycles[n] #Returns the value
 
 # ------------
 # collatz_eval
@@ -61,11 +53,11 @@ def collatz_eval (i, j) :
     return the max cycle length of the range [i, j]
     """
     maxcycles = 1
-    if (i > j) :
+    if (i > j) : #Swapping i and j
         i, j = j, i
     for n in range(i, j+1) :
         c = get_cycles(n)
-        if maxcycles < c:
+        if maxcycles < c :
             maxcycles = c
     return maxcycles
 

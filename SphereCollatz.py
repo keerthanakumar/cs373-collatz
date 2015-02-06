@@ -33,15 +33,6 @@ def get_cycles (n) :
     """
     n the number within 1 and 1000000 to calculate the cycles
     return the number of cycles taken from n to 1 following problem 
-    c = 1
-    while (n > 1) :
-        if (n % 2) == 0:
-            n = n >> 1
-            c += 1
-        else:
-            n = n + (n >> 1) + 1
-            c += 2
-    return c
     """
     if n not in num_cycles :
         if (n % 2) == 0 :
@@ -96,15 +87,6 @@ def collatz_solve (r, w) :
         i, j = collatz_read(s)
         v    = collatz_eval(i, j)
         collatz_print(w, i, j, v)
-
-# ------------
-# mapper_print
-# ------------
-
-def mapper_print(v):
-    for k  in num_cycles:
-        if num_cycles[k] is  v:
-            print(k, num_cycles[k])
 
 # ----
 # main

@@ -34,7 +34,7 @@ def get_cycles (n) :
     n the number within 1 and 1000000 to calculate the cycles
     return the number of cycles taken from n to 1 following problem 
     """
-    if n not in num_cycles :
+    if n not in num_cycles : #Checking in cache
         if (n % 2) == 0 :
             num_cycles[n] = get_cycles(n >> 1) + 1
         else:

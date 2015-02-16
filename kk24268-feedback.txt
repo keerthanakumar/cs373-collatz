@@ -1,0 +1,22 @@
+kk24268
+5/5 github setup and commit log
+3/5 github issues
+15/15 sphere and cache
+15/15 average of 3 unit test per function
+13/15 100 lines of acceptance test
+10/10 Pydoc
+5/5 Google Form with time estimate.
+0/0 bonus and panalty points
+52/70 total
+comment:
+Missing half the issues.
+Invalid acceptance test -2
+Missing files -14
+Bonus:
+    -
+Penalty:
+    csm2556 Passed
+    da9492 Passed
+    dpw454 Passed
+    gg8745 Passed
+    jab5948 Passed
